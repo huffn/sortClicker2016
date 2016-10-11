@@ -1,0 +1,218 @@
+html {
+  background: #000;
+}
+
+#root {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: repeating-linear-gradient(0deg,rgba(255,255,255,0.05) 0px,rgba(255,255,255,0.05) 1px,rgba(255,255,255,0) 1px,rgba(255,255,255,0) 2px);
+}
+
+.fullScreen {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.gameArea {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.clickerArea {
+  flex: 1;
+}
+
+.playArea {
+  display: flex;
+  flex: 1;
+}
+
+a,a:visited {
+  text-align: center;
+  width: 100px;
+  margin-left: 20px;
+  border-bottom: .2rem solid #6BFF2B;
+  color: #6BFF2B;
+  -webkit-text-fill-color: #6BFF2B;
+  -webkit-filter: drop-shadow(2px 2px 15px #6BFF2B);
+  -webkit-text-stroke: 0;
+  text-decoration: none;
+}
+
+a:active,a:focus,a:hover {
+  background-color: #6BFF2B;
+  color: #000;
+  -webkit-text-fill-color: #000;
+  -webkit-filter: drop-shadow(2px 2px 15px #6BFF2B);
+  -webkit-text-stroke: 0;
+}
+
+.clicker {
+  font-family: 'Mr Dafoe',cursive;
+  font-size: 42px;
+  position: absolute;
+  cursor: pointer;
+  color: #FC96FC;
+  -webkit-text-fill-color: #FC96FC;
+  -webkit-filter: drop-shadow(2px 2px 15px #FC96FC);
+  -webkit-text-stroke: 0;
+  user-select: none;
+  top: 160px;
+  left: 25px;
+  transition: all 1s ease;
+}
+
+.highScore {
+  flex-basis: 300px;
+  font-family: 'VT323',monospace;
+  text-transform: uppercase;
+  font-size: 20px;
+  overflow-y: auto;
+  user-select: none;
+}
+
+.highScoreHeader {
+  display: flex;
+  color: #ff0;
+  font-weight: 700;
+}
+
+.highScoreHeader .score {
+  flex: 1;
+  text-align: center;
+}
+
+.highScoreHeader .avatar {
+  flex-basis: 100px;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.highScoreHeader .name {
+  flex: 2;
+  text-align: center;
+}
+
+.scoreContainer {
+  font-family: 'VT323',monospace;
+  text-transform: uppercase;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  align-content: space-between;
+}
+
+.scoreContainer .points {
+  flex: 1;
+  text-align: center;
+}
+
+.scoreContainer .avatar {
+  flex-basis: 100px;
+  padding: 5px 20px;
+}
+
+.scoreContainer .avatar img {
+  width: 100px;
+}
+
+.scoreContainer .avatar canvas {
+  image-rendering: optimizeSpeed;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: -o-crisp-edges;
+  image-rendering: crisp-edges;
+  -ms-interpolation-mode: nearest-neighbor;
+}
+
+.scoreContainer .name {
+  flex: 2;
+  text-align: center;
+}
+
+.Logo {
+  position: relative;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 0 #f1f1f1;
+  font-family: 'Righteous',cursive;
+  font-size: 50px;
+  text-align: center;
+  user-select: none;
+}
+
+h1 {
+  margin: 0;
+}
+
+.logoText {
+  -webkit-background-clip: text;
+  background-image: -webkit-linear-gradient(#C3BFB4 0%,#FDFCFA 50%,#E8E7E5 51%,#757172 52%,#E8E9DB 100%);
+  -webkit-filter: drop-shadow(2px 2px 15px #3F59F4);
+}
+
+.red {
+  color: #F10C20;
+  -webkit-text-fill-color: #F10C20;
+  -webkit-text-stroke: 0;
+  -webkit-filter: drop-shadow(2px 2px 15px #F10C20);
+  font-style: italic;
+  padding-right: 20px;
+}
+
+.green {
+  color: #6BFF2B;
+  -webkit-text-fill-color: #6BFF2B;
+  -webkit-filter: drop-shadow(2px 2px 15px #6BFF2B);
+  -webkit-text-stroke: 0;
+  font-style: italic;
+  padding-right: 20px;
+  margin-left: -20px;
+}
+
+.blue {
+  color: #3F59F4;
+  -webkit-text-fill-color: #3F59F4;
+  -webkit-filter: drop-shadow(2px 2px 15px #3F59F4);
+  -webkit-text-stroke: 0;
+  font-style: italic;
+  padding-right: 20px;
+  margin-left: -20px;
+}
+
+@media (max-width: 700px) {
+  .Logo {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 560px) {
+  .Logo {
+    font-size: 30px;
+  }
+
+  .highScore {
+    flex-basis: 200px;
+  }
+
+  .highScoreHeader .name {
+    display: none;
+  }
+
+  .scoreContainer .name {
+    display: none;
+  }
+}
+
+@media (max-width: 415px) {
+  .Logo {
+    font-size: 24px;
+  }
+}
