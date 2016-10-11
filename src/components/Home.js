@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import base from '../base';
 import Logo from './Logo';
 import HighScores from './HighScores';
+import Game from './Game';
 
 class Home extends Component {
   state = {
@@ -20,6 +21,9 @@ class Home extends Component {
       <div className="fullScreen">
         <Logo title="SORT Clicker"/>
         <div className="playArea">
+          <div className="gameArea">
+            <Game />
+          </div>
           <HighScores scores={this.state.highScores}/>
         </div>
       </div>
