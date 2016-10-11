@@ -10,6 +10,7 @@ class Home extends Component {
     this.authenticate = this.authenticate.bind(this);
     this.authHandler = this.authHandler.bind(this);
     this.logout = this.logout.bind(this);
+    this.increaseScore = this.increaseScore.bind(this);
   }
   
   state = {
@@ -65,6 +66,11 @@ class Home extends Component {
     this.setState({ uid: null });
   }
   
+  increaseScore() {
+    const highScoreRef = base.database().ref(`highScores/${this.state.uid}`);
+    highScoreRef.update({ score: this.state.highScores[this.state.uid].score + 1 });
+  }
+  
   render() {
     const logo = <Logo title="SORT Clicker"/>
     if(!this.state.uid) {
@@ -84,7 +90,7 @@ class Home extends Component {
         <div className="playArea">
           <div className="gameArea">
             <a href="#" onClick={this.logout}>Log Out</a>
-            <Game />
+            <Game increaseScore={this.increaseScore}/>
           </div>
           <HighScores scores={this.state.highScores}/>
         </div>

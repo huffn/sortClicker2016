@@ -29,6 +29,9 @@ class Clicker extends Component {
   }
   
   moveAndUpdateScore() {
+    if(this.props.winner){
+      this.props.increaseScore();
+    }
     this.generatePosition();
   }
   

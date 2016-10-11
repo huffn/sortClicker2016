@@ -5,7 +5,7 @@ class Game extends Component {
   render() {
     return (
       <div className="clickerArea" ref={(clickerArea) => this.clickerArea = clickerArea}>
-        <Clicker winner="true" clickerArea={this.clickerArea}/>
+        <Clicker winner="true" increaseScore={this.props.increaseScore} clickerArea={this.clickerArea}/>
       </div>
     );
   }
