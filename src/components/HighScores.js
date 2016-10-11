@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import FlipMove from 'react-flip-move';
 import Score from './Score';
 
 class HighScores extends Component {
@@ -17,10 +18,12 @@ class HighScores extends Component {
           <div className="avatar">Avatar</div>
           <div className="name">Name</div>
         </div>
-        {
-          scores
-            .map(key => <Score key={key} index={key} detail={this.props.scores[key]}/>)
-        }
+        <FlipMove>
+          {
+            scores
+              .map(key => <Score key={key} index={key} detail={this.props.scores[key]}/>)
+          }
+        </FlipMove>
       </div>
     );
   }
