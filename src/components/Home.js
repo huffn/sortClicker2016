@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import base from '../base';
 import Logo from './Logo';
+import HighScores from './HighScores';
 
 class Home extends Component {
   state = {
@@ -16,7 +17,12 @@ class Home extends Component {
   
   render() {
     return (
-      <Logo title="SORT Clicker"/>
+      <div className="fullScreen">
+        <Logo title="SORT Clicker"/>
+        <div className="playArea">
+          <HighScores scores={this.state.highScores}/>
+        </div>
+      </div>
     );
   }
 }
