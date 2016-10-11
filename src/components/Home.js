@@ -22,6 +22,11 @@ class Home extends Component {
       context: this,
       state: 'highScores'
     });
+    base.onAuth((user) => {
+      if(user) {
+        this.authHandler(null, { user });
+      }
+    });
   }
   
   authenticate(provider) {
