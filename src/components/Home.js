@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
+import Logo from './Logo';
 
 class Home extends Component {
   render() {
     return (
-      <h1>Hello SORT</h1>
+      <Logo title="SORT Clicker"/>
     );
   }
 }
